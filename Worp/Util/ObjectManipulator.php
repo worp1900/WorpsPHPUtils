@@ -1,8 +1,18 @@
+<?php
 
+namespace Worp\Util;
 
+/**
+ * Class ObjectManipulator - A util class providing manipulators and iterators for php objects.
+ * @package Worp\Util
+ */
+class ObjectManipulator
+{
 	/**
 	 * Walks down the given path in an object and returns the value it finds at the end of the path.
 	 *
+	 * @author IMSoP <http://stackoverflow.com/users/157957/imsop>
+	 * @link http://stackoverflow.com/questions/25014014/is-it-possible-to-use-xpath-directly-on-php-objects
 	 * @param $obj - An object to traverse.
 	 * @param $path - The path to walk down.
 	 * @return value|null - The value of the property at the path's end if it was found or null if an error occured.
@@ -37,6 +47,8 @@
 	/**
 	 * Walks down the given path in an object and sets the property at the end of it to the given value.
 	 *
+	 * @author IMSoP <http://stackoverflow.com/users/157957/imsop>
+	 * @link http://stackoverflow.com/questions/25014014/is-it-possible-to-use-xpath-directly-on-php-objects
 	 * @param $obj - An object to traverse down and set the value.
 	 * @param $path - The path to walk down and set the value to.
 	 * @param $value - The value to set the property at the end of the path to.
@@ -60,3 +72,4 @@
 		// and is a reference to the variable we want to overwrite
 		$var = $value;
 	}
+}
